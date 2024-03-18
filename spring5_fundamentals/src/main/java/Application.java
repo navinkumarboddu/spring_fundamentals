@@ -1,5 +1,3 @@
-package com.pluralsight;
-
 import com.pluralsight.service.SpeakerService;
 import com.pluralsight.service.SpeakerServiceImpl;
 
