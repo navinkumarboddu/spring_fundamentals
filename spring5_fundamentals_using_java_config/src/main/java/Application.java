@@ -17,8 +17,14 @@ public class Application {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         SpeakerService service = context.getBean("speakerService", SpeakerService.class);
+        System.out.println(service);
 
         System.out.println(service.findAll().getFirst().getFirstName());
         System.out.println(service.findAll().getFirst().getLastName());
+
+        /*
+        *  To check the scope for service object*/
+        SpeakerService service2 = context.getBean("speakerService", SpeakerService.class);
+        System.out.println(service2);
     }
 }
